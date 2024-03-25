@@ -4,5 +4,4 @@ access_key = ""
 secret_key = ""
 }
 
-AWS provider 
-AWS provider branch
+all deleted
