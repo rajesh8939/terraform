@@ -1,0 +1,17 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+- script: |
+    terraform init
+    terraform validate
+  displayName: 'Terraform Init & Validate'
+
+- script: terraform plan -out=tfplan
+  displayName: 'Terraform Plan'
+
+- script: terraform apply tfplan
+  displayName: 'Terraform Apply'
+
